@@ -1,0 +1,477 @@
+---
+title: DeganovRest | Главная
+bodyClass: main-page
+yandexMap: true
+---
+
+extends includes/_page
+
+block main
+    section.main-section
+        .main-section__screen
+            .main-section__img
+                img(src="assets/images/main-bg.jpg", alt="DeganovRest", title="DeganovRest")
+            .container
+                .main-section__wrapper
+                    h1.title Реставрация, покраска мебели в мастерской и на дому
+                    ul.main-section__list
+                        li
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#finish")
+                            span Выполнено более 1000 работ
+                        li
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#colors")
+                            span Индивидуальный подход к каждому проекту
+                        li
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#check")
+                            span Более 10 лет в реставрации, ремонте и покраске
+                        li
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#fabric")
+                            span Собственное производство и штат профильных специалистов
+                    .main-section__buttons
+                        a.btn--yellow.main-section__btn(data-src="#popup-photos", data-fancybox)
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#photo")
+                            span Выслать фото для оценки
+                        a.btn--border.main-section__btn(data-src="#popup-call", data-fancybox)
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#call")
+                            span Заказать обратный звонок
+        .main-section__advantages
+            .container
+                .main-section__block
+                    .main-section__advantage
+                        img(src="assets/images/advantage-1.svg", alt="advantage")
+                        span Восстановление
+                    .main-section__advantage
+                        img(src="assets/images/advantage-2.svg", alt="advantage")
+                        span Ремонт
+                    .main-section__advantage
+                        img(src="assets/images/advantage-3.svg", alt="advantage")
+                        span Качество
+                    .main-section__advantage
+                        img(src="assets/images/advantage-4.svg", alt="advantage")
+                        span В срок
+
+    section
+        .container
+            .section__wrapper
+                .title-section Наши услуги
+                .section-grid
+                    a.card(href="")
+                        .card__btn
+                            span Подробнее
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                        .card__img
+                            img(src="assets/images/service-1.jpg", alt="service")
+                        .card__subtitle Реставрация
+                        .card__title Дверей
+                    a.card(href="")
+                        .card__btn
+                            span Подробнее
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                        .card__img
+                            img(src="assets/images/service-2.jpg", alt="service")
+                        .card__subtitle Реставрация
+                        .card__title Стола
+                    a.card(href="")
+                        .card__btn
+                            span Подробнее
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                        .card__img
+                            img(src="assets/images/service-3.jpg", alt="service")
+                        .card__subtitle Реставрация
+                        .card__title Стульев
+                    a.card(href="")
+                        .card__btn
+                            span Подробнее
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                        .card__img
+                            img(src="assets/images/service-4.jpg", alt="service")
+                        .card__subtitle Реставрация
+                        .card__title Кресла
+                    a.card(href="")
+                        .card__btn
+                            span Подробнее
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                        .card__img
+                            img(src="assets/images/service-5.jpg", alt="service")
+                        .card__subtitle Реставрация
+                        .card__title Кухонной мебели
+                    a.card(href="")
+                        .card__btn
+                            span Подробнее
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                        .card__img
+                            img(src="assets/images/service-6.jpg", alt="service")
+                        .card__subtitle Реставрация
+                        .card__title Старинной мебели
+                    a.card(href="")
+                        .card__btn
+                            span Подробнее
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                        .card__img
+                            img(src="assets/images/service-7.jpg", alt="service")
+                        .card__subtitle Реставрация
+                        .card__title Мягкой мебели
+                    a.card(href="")
+                        .card__btn
+                            span Подробнее
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                        .card__img
+                            img(src="assets/images/service-8.jpg", alt="service")
+                        .card__subtitle Реставрация
+                        .card__title Пианино
+                a.btn--section.btn--black(href="")
+                    svg
+                        use(xlink:href="assets/icons/sprites.svg#brush")
+                    span Все услуги
+    
+    section
+        .container
+            .section__wrapper
+                .title-section С чем можем помочь
+                .help__grid
+                    .help__row
+                        .help__item
+                            .help__number 1
+                            .help__title Устранение различных повреждений
+                            .help__subtitle Трещин, сколов, потёртостей, следов удара, прожогов, пятен, царапин, растрескиваний, вмятин и сквозных пробоин, и т.д.
+                        .help__item
+                            .help__number 2
+                            .help__title Ремонт и реставрация элитной мебели
+                            .help__subtitle Эксклюзивной продукции, нестандартные конструкции, резные и кованные элементы, перетяжка
+                    .help__row
+                        .help__item
+                            .help__number 3
+                            .help__title Реставрация старинной, антикварной мебели и предметов интерьера
+                            .help__subtitle С гарантией качества от команды профессионалов Deganov Rest
+                        .help__item
+                            .help__number 4
+                            .help__title Ремонт и реставрация любой мебели и изделий из дерева
+                            .help__subtitle Занимаемся работами любого уровня сложности
+    
+    section
+        .container
+            .section__wrapper
+                .title-section Наши работы
+                .portfolio__grid
+                    .portfolio__item
+                        .portfolio__images
+                            .before-after
+                                img(src="assets/images/product-2.jpg")
+                                img(src="assets/images/product-1.jpg")
+                        a.portfolio__item-title(href="") Реставрация поверхности дивана 19 века
+                        .portfolio__item-descr 3 дня работы, до и после. Ремонт и реставрация, самовывоз от клиента
+                    .portfolio__item
+                        .portfolio__images
+                            .before-after
+                                img(src="assets/images/product-3.jpg")
+                                img(src="assets/images/product-4.jpg")
+                        a.portfolio__item-title(href="") Реставрация поверхности дивана 19 века
+                        .portfolio__item-descr 3 дня работы, до и после. Ремонт и реставрация, самовывоз от клиента
+                    .portfolio__item
+                        .portfolio__images
+                            .before-after
+                                img(src="assets/images/product-3.jpg")
+                                img(src="assets/images/product-4.jpg")
+                        a.portfolio__item-title(href="") Реставрация поверхности дивана 19 века
+                        .portfolio__item-descr 3 дня работы, до и после. Ремонт и реставрация, самовывоз от клиента
+                    .portfolio__item
+                        .portfolio__images
+                            .before-after
+                                img(src="assets/images/product-2.jpg")
+                                img(src="assets/images/product-1.jpg")
+                        a.portfolio__item-title(href="") Реставрация поверхности дивана 19 века
+                        .portfolio__item-descr 3 дня работы, до и после. Ремонт и реставрация, самовывоз от клиента
+                a.portfolio__btn.btn--black(href="")
+                    svg
+                        use(xlink:href="assets/icons/sprites.svg#img")
+                    span Смотреть все
+    
+    section
+        .container
+            .section__wrapper
+                .title-section Почему мы
+                .advantages__grid
+                    .advantages__img
+                        img(src="assets/images/advantages.jpg", alt="advantages")
+                    .advantages__content
+                        .advantages__item
+                            .advantages__icon
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#advantage-1")
+                            .advantages__title Только качественные импортные материалы
+                            .advantages__subtitle Мы используем в каждом своем проекте
+                        .advantages__item
+                            .advantages__icon
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#advantage-2")
+                            .advantages__title Гарантия «36 месяцев на все наши работы»
+                            .advantages__subtitle Официальный договор и собственная сервисная служба
+                        .advantages__item
+                            .advantages__icon
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#advantage-3")
+                            .advantages__title Вывоз и привоз мебели
+                            .advantages__subtitle Бесплатно от квартиры до фабрики и обратно
+                        .advantages__item
+                            .advantages__icon
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#advantage-4")
+                            .advantages__title Работаем по Москве и МО
+                            .advantages__subtitle В радиусе 60 км от МКАД, возможен ремонт на дому
+    
+    section
+        .container
+            .section__wrapper
+                .title-section Отзывы
+                .reviews__grid
+                    .reviews__item
+                        .reviews__content
+                            .reviews__text «Хотим выразить Сергею благодарность за восстановление столика и двух стульев, которые делал ещё мой дед. Этой мебели уже около 60 лет и с помощью…»
+                            .reviews__row
+                                .reviews__name
+                                    .reviews__name-img
+                                        img(src="assets/images/user-1.svg", alt="user")
+                                    .reviews__name-text Анатолий
+                                .reviews__date 21.10.2023
+                        .swiper-container.reviews__slider
+                            .swiper-wrapper
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-1.jpg", alt="review")
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-1.jpg", alt="review")
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-1.jpg", alt="review")
+                            .swiper-button-prev.reviews-button-prev
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#arrow-left")
+                            .swiper-button-next.reviews-button-next
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#arrow-right")
+                            .swiper-pagination.reviews-pagination
+                    .reviews__item
+                        .reviews__content
+                            .reviews__text «Хотим выразить Сергею благодарность за восстановление столика и двух стульев, которые делал ещё мой дед. Этой мебели уже около 60 лет и с помощью…»
+                            .reviews__row
+                                .reviews__name
+                                    .reviews__name-img
+                                        img(src="assets/images/user-2.svg", alt="user")
+                                    .reviews__name-text Ирина
+                                .reviews__date 22.10.2023
+                        .swiper-container.reviews__slider
+                            .swiper-wrapper
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-2.jpg", alt="review")
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-2.jpg", alt="review")
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-2.jpg", alt="review")
+                            .swiper-button-prev.reviews-button-prev
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#arrow-left")
+                            .swiper-button-next.reviews-button-next
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#arrow-right")
+                            .swiper-pagination.reviews-pagination
+                    .reviews__item
+                        .reviews__content
+                            .reviews__text «Хотим выразить Сергею благодарность за восстановление столика и двух стульев, которые делал ещё мой дед. Этой мебели уже около 60 лет и с помощью…»
+                            .reviews__row
+                                .reviews__name
+                                    .reviews__name-img
+                                        img(src="assets/images/user-1.svg", alt="user")
+                                    .reviews__name-text Юрий
+                                .reviews__date 23.10.2023
+                        .swiper-container.reviews__slider
+                            .swiper-wrapper
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-3.jpg", alt="review")
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-3.jpg", alt="review")
+                                .swiper-slide.reviews__slide
+                                    img(src="assets/images/review-3.jpg", alt="review")
+                            .swiper-button-prev.reviews-button-prev
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#arrow-left")
+                            .swiper-button-next.reviews-button-next
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#arrow-right")
+                            .swiper-pagination.reviews-pagination
+                a.reviews__btn.btn--black(href="")
+                    svg
+                        use(xlink:href="assets/icons/sprites.svg#chat")
+                    span Смотреть все
+    
+    section
+        .container
+            .section__wrapper
+                .title-section Цены
+                .prices__grid
+                    .prices__column
+                        .prices__row
+                            .prices__title Реставрация скола
+                            .prices__subtitle от 500 ₽
+                        .prices__row
+                            .prices__title Реставрация царапины
+                            .prices__subtitle от 1 000 ₽
+                        .prices__row
+                            .prices__title Реставрация прожога
+                            .prices__subtitle от 5 000 ₽
+                        .prices__row
+                            .prices__title Реставрация после питомцев
+                            .prices__subtitle от 4 000 ₽
+                        .prices__row
+                            .prices__title Реставрация стульев
+                            .prices__subtitle от 3 000 ₽
+                        .prices__row
+                            .prices__title Реставрация кресла
+                            .prices__subtitle от 6 000 ₽
+                        .prices__row
+                            .prices__title Реставрация кухонных фасадов
+                            .prices__subtitle от 3 000 ₽
+                    .prices__column
+                        .prices__row
+                            .prices__title Реставрация дверей
+                            .prices__subtitle от 4 000 ₽
+                        .prices__row
+                            .prices__title Реставрация столов
+                            .prices__subtitle от 4 000 ₽
+                        .prices__row
+                            .prices__title Реставрация буфета
+                            .prices__subtitle от 20 000 ₽
+                        .prices__row
+                            .prices__title Реставрация комода
+                            .prices__subtitle от 7 000 ₽
+                        .prices__row
+                            .prices__title Реставрация шкафа
+                            .prices__subtitle от 25 000 ₽
+                        .prices__row
+                            .prices__title Реставрация пианино
+                            .prices__subtitle от 15 000 ₽
+                        .prices__row
+                            .prices__title Реставрация мягкой мебели
+                            .prices__subtitle от 8 000 ₽
+                a.prices__btn.btn--black(href="")
+                    svg
+                        use(xlink:href="assets/icons/sprites.svg#cash")
+                    span Полный прайс-лист
+    
+    section
+        .container
+            .section__wrapper
+                .message
+                    a.message__logo(href="/")
+                        img(src="assets/images/logo.svg", alt="logo")
+                    .message__text
+                        p «Реставрация помогает создать уникальный интерьер, и мебель нужна вам, чтобы создать нужное настроение.
+                        p Если вы нашли у себя старую мебель, которую жалко просто выбросить.
+                        p Её можно обновить и подарить ей новую жизнь!»
+                    .message__signature
+                        .message__signature-img
+                            img(src="assets/images/ceo.jpg", alt="ceo")
+                        .message__signature-text
+                            .message__signature-title Сергей Деганов
+                            .message__signature-subtitle Генеральный директор
+    
+    section
+        .container
+            .section__wrapper
+                .title-section Схема работы
+                .steps__grid
+                    .steps__item
+                        .steps__number 1
+                        .steps__img
+                            img(src="assets/images/step-1.jpg", alt="step")
+                        .steps__title Заявка
+                        .steps__subtitle Оставьте заявку на обратный звонок, позвоните нам по телефону или напишите в один из мессенеджеров
+                    .steps__item
+                        .steps__number 2
+                        .steps__img
+                            img(src="assets/images/step-2.jpg", alt="step")
+                        .steps__title Выезд мастера
+                        .steps__subtitle Наш мастер бесплатно выезжает к вам. На месте вы оговариваете все подробности работ и окончательную стоимость
+                    .steps__item
+                        .steps__number 3
+                        .steps__img
+                            img(src="assets/images/step-3.jpg", alt="step")
+                        .steps__title Работа в процессе
+                        .steps__subtitle После предоплаты мы сами забираем мебель, предмет интерьера и производим реставрацию
+                    .steps__item
+                        .steps__number 4
+                        .steps__img
+                            img(src="assets/images/step-4.jpg", alt="step")
+                        .steps__title Финал
+                        .steps__subtitle Мы бесплатно привезём вашу мебель или предмет интерьера обратно, а вы произведёте финальный расчёт по договору
+    
+    section.section--bottom
+        .container
+            .title-section Контакты
+            .contacts__grid
+                .contacts__content
+                    .contacts__info
+                        .contacts__info-item
+                            .contacts__info-title Адрес:
+                            .contacts__info-subtitle г. Москва, Мукомольный проезд, дом 4А, стр. 2, офис 601
+                        .contacts__info-item
+                            .contacts__info-title Режим работы:
+                            .contacts__info-subtitle ПН-ПТ 08:00 - 17:00
+                        .contacts__info-item
+                            .contacts__info-title E-mail:
+                            .contacts__info-subtitle Deganovrest@yandex.ru
+                    .contacts__links
+                        .contacts__links-title Связаться с нами:
+                        .contacts__links-buttons
+                            a.contacts__links-phone.btn--yellow(href="tel:+7 (495) 621-24-24")
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#phone")
+                                span +7 (495) 621-24-24
+                            a.contacts__links-call.btn--yellow(href="")
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#phone")
+                                span Заказать обратный звонок
+                            .contacts__links-social-media
+                                a.contacts__btn.contacts__btn--wa(href="")
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#wa")
+                                a.contacts__btn.contacts__btn--tg(href="")
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#tg")
+                    .contacts__links
+                        .contacts__links-title Мы на картах:
+                        .contacts__links-maps
+                            a.contacts__link(href="")
+                                .contacts__link-icon
+                                    img(src="assets/images/yandex.svg", alt="yandex")
+                                .contacts__link-content
+                                    span Мы на Яндекс картах
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                            a.contacts__link(href="")
+                                .contacts__link-icon
+                                    img(src="assets/images/2gis.svg", alt="2gis")
+                                .contacts__link-content
+                                    span Мы на 2ГИС картах
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                            a.contacts__link(href="")
+                                .contacts__link-icon
+                                    img(src="assets/images/google.svg", alt="google")
+                                .contacts__link-content
+                                    span Мы на Google картах
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                .contacts__map
+                    .map-box.js-map(id="map", data-coord="55.751857, 37.525288", data-balloon-title="Deganov Rest", data-balloon-body="г. Москва, Мукомольный проезд, дом 4А, стр. 2, офис 601")

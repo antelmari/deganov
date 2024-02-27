@@ -1,0 +1,74 @@
+---
+title: DeganovRest | Контакты
+bodyClass: contacts-page
+yandexMap: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Контакты')
+
+    .container
+        h1.title-section Контакты
+    
+    section.section
+        .container
+            .contacts__grid
+                .contacts__content
+                    .contacts__info
+                        .contacts__info-item
+                            .contacts__info-title Адрес:
+                            .contacts__info-subtitle г. Москва, Мукомольный проезд, дом 4А, стр. 2, офис 601
+                        .contacts__info-item
+                            .contacts__info-title Режим работы:
+                            .contacts__info-subtitle ПН-ПТ 08:00 - 17:00
+                        .contacts__info-item
+                            .contacts__info-title E-mail:
+                            .contacts__info-subtitle Deganovrest@yandex.ru
+                    .contacts__links
+                        .contacts__links-title Связаться с нами:
+                        .contacts__links-buttons
+                            a.contacts__links-phone.btn--yellow(href="tel:+7 (495) 621-24-24")
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#phone")
+                                span +7 (495) 621-24-24
+                            a.contacts__links-call.btn--yellow(href="")
+                                svg
+                                    use(xlink:href="assets/icons/sprites.svg#phone")
+                                span Заказать обратный звонок
+                            .contacts__links-social-media
+                                a.contacts__btn(href="")
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#wa")
+                                a.contacts__btn(href="")
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#tg")
+                    .contacts__links
+                        .contacts__links-title Мы на картах:
+                        .contacts__links-maps
+                            a.contacts__link(href="")
+                                .contacts__link-icon
+                                    img(src="assets/images/yandex.svg", alt="yandex")
+                                .contacts__link-content
+                                    span Мы на Яндекс картах
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                            a.contacts__link(href="")
+                                .contacts__link-icon
+                                    img(src="assets/images/2gis.svg", alt="2gis")
+                                .contacts__link-content
+                                    span Мы на 2ГИС картах
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                            a.contacts__link(href="")
+                                .contacts__link-icon
+                                    img(src="assets/images/google.svg", alt="google")
+                                .contacts__link-content
+                                    span Мы на Google картах
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#arrow-more")
+                .contacts__map
+                    .map-box.js-map(id="map", data-coord="55.751857, 37.525288", data-balloon-title="Deganov Rest", data-balloon-body="г. Москва, Мукомольный проезд, дом 4А, стр. 2, офис 601")

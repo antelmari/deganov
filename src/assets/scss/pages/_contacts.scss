@@ -1,0 +1,182 @@
+.contacts {
+    &__grid {
+        margin-top: 34px;
+        border-radius: 16px;
+        overflow: hidden;
+        @include breakpoint(md) {
+            display: flex;
+        }
+        @include breakpoint(lg) {
+            margin-top: 48px;
+        }
+    }
+    &__content {
+        padding: 24px;
+        background-color: $black-main;
+        display: grid;
+        row-gap: 16px;
+        @include breakpoint(md) {
+            width: 300px;
+        }
+        @include breakpoint(lg) {
+            width: 400px;
+        }
+    }
+    &__info {
+        display: grid;
+        row-gap: 16px;
+        &-title {
+            font-family: 'Onest', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+            color: rgba(255, 253, 234, 0.72);
+        }
+        &-subtitle {
+            margin-top: 8px;
+            font-family: 'Onest', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 130%;
+            color: $beige;
+            @include breakpoint(lg) {
+                font-size: 16px;
+            }
+        }
+    }
+    &__links {
+        &-title {
+            font-family: 'Onest', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+            color: rgba(255, 253, 234, 0.72);
+        }
+        &-buttons {
+            margin-top: 8px;
+            display: grid;
+            row-gap: 8px;
+            @include breakpoint(lg) {
+                grid-template-columns: 104px 240px;
+                column-gap: 8px;
+                grid-template-areas:
+                    "social-media phone"
+                    "call call";
+            }
+        }
+        &-phone {
+            padding: 0;
+            @include breakpoint(lg) {
+                grid-area: phone;
+            }
+        }
+        &-call {
+            padding: 0;
+            @include breakpoint(lg) {
+                grid-area:  call;
+            }
+        }
+        &-social-media {
+            display: grid;
+            grid-template-columns: repeat(2, 48px);
+            column-gap: 8px;
+            @include breakpoint(lg) {
+                grid-area: social-media;
+            }
+        }
+        &-maps {
+            margin-top: 8px;
+            display: grid;
+            row-gap: 8px;
+        }
+    }
+    &__map {
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        @include breakpoint(md) {
+            width: calc(100% - 300px);
+        }
+        @include breakpoint(lg) {
+            width: calc(100% - 400px);
+        }
+        .map-box {
+            height: 330px;
+            @include breakpoint(md) {
+                height: 100%;
+            }
+        }
+    }
+    &__btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $beige;
+        }
+        &--wa {
+            background-color: #39C04C;
+        }
+        &--tg {
+            background-color: #13A6E5;
+        }
+    }
+    &__link {
+        width: 100%;
+        height: 48px;
+        border-radius: 8px;
+        padding-right: 12px;
+        background-color: $yellow;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: .5s;
+        @include breakpoint(lg) {
+            &:hover {
+                background-color: $gray-hover;
+            }
+        }
+        &-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: $beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &-content {
+            width: calc(100% - 48px);
+            padding-left: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+                font-family: 'Onest', sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 130%;
+                color: $black-main;
+                @include breakpoint(lg) {
+                    font-size: 16px;
+                }
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: $black-main;
+            }
+        }
+    }
+}

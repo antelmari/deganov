@@ -1,0 +1,145 @@
+---
+title: DeganovRest | Цены
+bodyClass: prices-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Цены')
+
+    .container
+        h1.title-section Цены
+    
+    section.universal
+        .container
+            .prices__wrapper
+                .prices__block
+                    .prices__block-title Реставрация
+                    .prices__grid
+                        .prices__column
+                            .prices__row
+                                .prices__title Реставрация скола
+                                .prices__subtitle от 500 ₽
+                            .prices__row
+                                .prices__title Реставрация царапины
+                                .prices__subtitle от 1 000 ₽
+                            .prices__row
+                                .prices__title Реставрация прожога
+                                .prices__subtitle от 5 000 ₽
+                            .prices__row
+                                .prices__title Реставрация после питомцев
+                                .prices__subtitle от 4 000 ₽
+                            .prices__row
+                                .prices__title Реставрация стульев
+                                .prices__subtitle от 3 000 ₽
+                            .prices__row
+                                .prices__title Реставрация кресла
+                                .prices__subtitle от 6 000 ₽
+                            .prices__row
+                                .prices__title Реставрация кухонных фасадов
+                                .prices__subtitle от 3 000 ₽
+                        .prices__column
+                            .prices__row
+                                .prices__title Реставрация дверей
+                                .prices__subtitle от 4 000 ₽
+                            .prices__row
+                                .prices__title Реставрация столов
+                                .prices__subtitle от 4 000 ₽
+                            .prices__row
+                                .prices__title Реставрация буфета
+                                .prices__subtitle от 20 000 ₽
+                            .prices__row
+                                .prices__title Реставрация комода
+                                .prices__subtitle от 7 000 ₽
+                            .prices__row
+                                .prices__title Реставрация шкафа
+                                .prices__subtitle от 25 000 ₽
+                            .prices__row
+                                .prices__title Реставрация пианино
+                                .prices__subtitle от 15 000 ₽
+                            .prices__row
+                                .prices__title Реставрация мягкой мебели
+                                .prices__subtitle от 8 000 ₽
+                .prices__block
+                    .prices__block-title Покраска
+                    .prices__grid
+                        .prices__column
+                            .prices__row
+                                .prices__title Матовая эмаль
+                                .prices__subtitle от 3 000 ₽
+                            .prices__row
+                                .prices__title Глянцевая эмаль
+                                .prices__subtitle от 4 000 ₽
+                            .prices__row
+                                .prices__title Эмаль + глянцевый лак + полировка
+                                .prices__subtitle от 7 000 ₽
+                            .prices__row
+                                .prices__title Матовый лак
+                                .prices__subtitle от 3 000 ₽
+                            .prices__row
+                                .prices__title Матовый лак (патин)
+                                .prices__subtitle от 3 000 ₽
+                            .prices__row
+                                .prices__title Глянцевый лак
+                                .prices__subtitle от 5 000 ₽
+                            .prices__row
+                                .prices__title Глянцевый лак с полировкой
+                                .prices__subtitle от 12 000 ₽
+                        .prices__column
+                            .prices__row
+                                .prices__title Тонировка / морилка
+                                .prices__subtitle от 1 000 ₽
+                            .prices__row
+                                .prices__title Жемчуг/ перламутр
+                                .prices__subtitle от 1 000 ₽
+                            .prices__row
+                                .prices__title Жидкая поталь
+                                .prices__subtitle от 12000 ₽
+                            .prices__row
+                                .prices__title Металлизация
+                                .prices__subtitle от 7 000 ₽
+                            .prices__row
+                                .prices__title Мрамор
+                                .prices__subtitle от 2 000 ₽
+                            .prices__row
+                                .prices__title Металлик
+                                .prices__subtitle от 2 000 ₽
+                            .prices__row
+                                .prices__title Поталь (золочение)
+                                .prices__subtitle от 11 000 ₽
+            
+            .form__wrapper
+                .form__content
+                    .form__title Оставьте заявку для обратного звонка
+                    .form
+                        form(action="#")
+                            .form__inputs
+                                .form__input
+                                    label(for="form-input-1") Ваше имя
+                                    input(id="form-input-1", type="text", placeholder="Иван")
+                                .form__input
+                                    label(for="form-input-2") Телефон
+                                    input(id="form-input-2", type="tel", placeholder="+7(999)999-99-99")
+                            .form__submit
+                                input(type="submit", value="")
+                                .form__submit-content.btn--yellow
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#phone")
+                                    span Заказать обратный звонок
+                            .form__buttons
+                                .form__social-media
+                                    a.form__btn(href="")
+                                        svg
+                                            use(xlink:href="assets/icons/sprites.svg#wa")
+                                    a.form__btn(href="")
+                                        svg
+                                            use(xlink:href="assets/icons/sprites.svg#tg")
+                                a.form__phone.btn--yellow(href="tel:+7 (495) 621-24-24")
+                                    svg
+                                        use(xlink:href="assets/icons/sprites.svg#phone")
+                                    span +7 (495) 621-24-24
+                .form__img
+                    img(src="assets/images/product-1.jpg", alt="product")

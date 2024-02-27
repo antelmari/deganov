@@ -1,0 +1,132 @@
+.btn {
+    &--yellow {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: $yellow;
+        padding: 8px 24px;
+        transition: .5s;
+        cursor: pointer;
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $black-main;
+        }
+        span {
+            margin-left: 8px;
+            font-family: 'Onest', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+            color: $black-main;
+        }
+        @include breakpoint(lg) {
+            &:hover {
+                background-color: $gray-hover;
+            }
+        }
+    }
+    &--border {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        border: 1px solid $yellow;
+        padding: 8px 24px;
+        transition: .5s;
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $yellow;
+            transition: .5s;
+        }
+        span {
+            margin-left: 8px;
+            font-family: 'Onest', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+            color: $yellow;
+            transition: .5s;
+        }
+        @include breakpoint(lg) {
+            &:hover {
+                background-color: $gray-hover;
+                border-color: $gray-hover;
+                svg {
+                    fill: $black-main;
+                }
+                span {
+                    color: $black-main;
+                }
+            }
+        }
+    }
+    &--section {
+        width: 100%;
+        margin-top: 34px;
+        @include breakpoint(sm) {
+            width: calc(50% - 10px);
+        }
+        @include breakpoint(md) {
+            width: 222px;
+        }
+        @include breakpoint(lg) {
+            width: 315px;
+        }
+        @include breakpoint(xl) {
+            margin-top: 48px;
+            width: 260px;
+        }
+    }
+    &--center {
+        width: 100%;
+        margin-top: 34px;
+        @include breakpoint(md) {
+            width: 260px;
+            margin: 34px auto 0 auto;
+        }
+        @include breakpoint(lg) {
+            margin-top: 40px;
+        }
+    }
+    &--black {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: $black-main;
+        padding: 8px 24px;
+        transition: .5s;
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $yellow;
+            transition: .5s;
+        }
+        span {
+            margin-left: 8px;
+            font-family: 'Onest', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+            color: $beige;
+            transition: .5s;
+        }
+        @include breakpoint(lg) {
+            &:hover {
+                background-color: $gray-hover;
+                svg {
+                    fill: $black-main;
+                }
+                span {
+                    color: $black-main;
+                }
+            }
+        }
+    }
+}

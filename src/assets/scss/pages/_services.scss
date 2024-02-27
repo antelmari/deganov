@@ -1,0 +1,232 @@
+.services {
+    &__wrapper {
+        display: grid;
+        row-gap: 60px;
+        @include breakpoint(lg) {
+            row-gap: 100px;
+        }
+    }
+    &__title {
+        font-family: 'Onest', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 120%;
+        color: $brown;
+        @include breakpoint(md) {
+            font-size: 32px;
+            line-height: 150%;
+        }
+    }
+    &__grid {
+        margin-top: 20px;
+        display: grid;
+        row-gap: 20px;
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+        @include breakpoint(md) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include breakpoint(lg) {
+            margin-top: 48px;
+        }
+        @include breakpoint(xl) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+    }
+}
+
+.service {
+    &__wrapper {
+        @include breakpoint(lg) {
+            display: grid;
+            grid-template-columns: repeat(2, 480px);
+            column-gap: 24px;
+        }
+        @include breakpoint(xl) {
+            grid-template-columns: repeat(2, 560px);
+            column-gap: 40px;
+        }
+    }
+    &__left {
+        @include breakpoint(md) {
+            padding: 0 40px;
+        }
+        @include breakpoint(lg) {
+            padding: 0;
+        }
+    }
+    &__right {
+        margin-top: 34px;
+        @include breakpoint(md) {
+            padding: 0 60px;
+        }
+        @include breakpoint(lg) {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+    &__image {
+        height: 212px;
+        display: flex;
+        border-radius: 16px;
+        overflow: hidden;
+        @include breakpoint(sm) {
+            height: 349px;
+        }
+        @include breakpoint(lg) {
+            height: 340px;
+        }
+        img {
+            min-width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__slider {
+        overflow: hidden;
+        &-wrapper {
+            margin-top: 24px;
+            @include breakpoint(md) {
+                position: relative;
+                padding: 0 20px;
+                margin-top: 20px;
+            }
+            @include breakpoint(lg) {
+                padding: 0 54px;
+                margin-top: 40px;
+            }
+        }
+        &--thumbs {
+            overflow: hidden;
+            .swiper-slide-thumb-active {
+                border-color: $yellow;
+            }
+        }
+    }
+    &__slide {
+        height: 212px;
+        border-radius: 16px;
+        overflow: hidden;
+        @include breakpoint(sm) {
+            height: 349px;
+        }
+        @include breakpoint(lg) {
+            height: 340px;
+        }
+        &--thumbs {
+            height: 96px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: .5s;
+            border: 2px solid transparent;
+            @include breakpoint(sm) {
+                height: 110px;
+            }
+            @include breakpoint(lg) {
+                height: 130px;
+            }
+            @include breakpoint(xl) {
+                height: 161px;
+            }
+        }
+    }
+    &__img {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        img {
+            min-width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__descr {
+        margin-top: 34px;
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $gray;
+        @include breakpoint(lg) {
+            margin-top: 48px;
+            font-size: 16px;
+        }
+        p + p {
+            margin-top: 14px;
+        }
+    }
+    &__prices {
+        margin-top: 34px;
+        @include breakpoint(lg) {
+            margin-top: 40px;
+        }
+    }
+    &__btns {
+        margin-top: 34px;
+        display: grid;
+        row-gap: 10px;
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 10px;
+        }
+        @include breakpoint(lg) {
+            margin-top: 40px;
+        }
+    }
+    &-button {
+        &-prev, &-next {
+            display: none;
+            @include breakpoint(md) {
+                margin: 0;
+                display: flex;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: $gray-light;
+            }
+            @include breakpoint(lg) {
+                width: 44px;
+                height: 44px;
+            }
+            &::after {
+                display: none;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: $black-main;
+            }
+        }
+        &-prev {
+            left: 0;
+            transform: translate(-100%, -50%);
+            @include breakpoint(lg) {
+                transform: translate(0, -50%);
+            }
+        }
+        &-next {
+            right: 0;
+            transform: translate(100%, -50%);
+            @include breakpoint(lg) {
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    &-pagination {
+        position: relative;
+        margin-top: 20px;
+        bottom: 0 !important;
+        @include breakpoint(lg) {
+            margin-top: 40px;
+        }
+        .swiper-pagination-bullet {
+            background: $gray-light;
+            opacity: 1;
+            &-active {
+                background: $yellow;
+            }
+        }
+    }
+}

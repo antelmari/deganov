@@ -1,0 +1,580 @@
+.header {
+    background-color: $black-main;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    border-bottom: 1px solid rgba(92, 91, 88, 0.20);
+    &__wrapper {
+        padding: 12px 20px;
+        align-items: center;
+        display: grid;
+        column-gap: 8px;
+        row-gap: 12px;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "logo logo"
+            "phone phone"
+            "contacts social-media"
+            "call call";
+        @include breakpoint(xs) {
+            column-gap: 5px;
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-template-areas:
+                "logo logo phone"
+                "contacts social-media call";
+        }
+        @include breakpoint(md) {
+            align-items: flex-start;
+            padding: 12px 0;
+            width: 704px;
+            margin: 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                "contacts contacts call"
+                "logo social-media phone"
+                "menu menu menu";
+        }
+        @include breakpoint(lg) {
+            width: 984px;
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+        @include breakpoint(xl) {
+            width: 1160px;
+            grid-template-columns: 3fr 1fr 1fr;
+        }
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-area: logo;
+    }
+    &__hamburger {
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $beige;
+        }
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+    &__logo {
+        width: 221px;
+        height: 37px;
+        @include breakpoint(xs) {
+            width: 160px;
+        }
+        @include breakpoint(sm) {
+            width: 221px;
+        }
+        @include breakpoint(md) {
+            margin-left: 0;
+            height: 44px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__info {
+        &-contacts {
+            grid-area: contacts;
+            width: max-content;
+            border-bottom: 1px solid rgba(92, 91, 88, 0.20);
+            @include breakpoint(md) {
+                padding: 0;
+                border-bottom: none;
+                display: flex;
+            }
+            @include breakpoint(xl) {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+        &-column {
+            @include breakpoint(lg) {
+                display: flex;
+            }
+        }
+        &-address {
+            display: none;
+            @include breakpoint(md) {
+                display: flex;
+                align-items: center;
+            }
+        }
+        &-schedule {
+            display: flex;
+            align-items: center;
+            @include breakpoint(lg) {
+                margin-top: 0;
+                margin-right: 20px;
+            }
+            @include breakpoint(xl) {
+                margin-right: 80px;
+            }
+        }
+        &-email {
+            display: none;
+            @include breakpoint(md) {
+                margin-top: 8px;
+                display: flex;
+                align-items: center;
+            }
+            @include breakpoint(lg) {
+                margin-top: 0;
+            }
+        }
+        &-icon {
+            svg {
+                width: 16px;
+                height: 16px;
+                fill: $beige;
+            }
+        }
+        &-text {
+            margin-left: 4px;
+            font-family: 'Onest', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: $beige;
+            @include breakpoint(md) {
+                max-width: 221px;
+            }
+            @include breakpoint(xl) {
+                max-width: none;
+            }
+        }
+    }
+    &__call {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: call;
+        @include breakpoint(xs) {
+            justify-content: flex-end;
+        }
+        @include breakpoint(md) {
+            padding: 0;
+            width: max-content;
+            height: max-content;
+            margin-left: auto;
+        }
+        &-icon {
+            svg {
+                width: 16px;
+                height: 16px;
+                fill: $yellow;
+            }
+        }
+        &-text {
+            margin-left: 4px;
+            font-family: 'Onest', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: $yellow;
+            @include breakpoint(xs) {
+                font-size: 9px;
+            }
+            @include breakpoint(sm) {
+                font-size: 12px;
+            }
+        }
+    }
+    &__social-media {
+        width: max-content;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 27px);
+        column-gap: 8px;
+        grid-area: social-media;
+        @include breakpoint(md) {
+            grid-template-columns: repeat(4, 40px);
+            margin-bottom: 0;
+        }
+        @include breakpoint(md) {
+            grid-template-columns: repeat(4, 44px);
+        }
+    }
+    &__btn {
+        width: 27px;
+        height: 27px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        @include breakpoint(md) {
+            width: 40px;
+            height: 40px;
+        }
+        @include breakpoint(md) {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $beige;
+        }
+        &--wa {
+            background-color: #39C04C;
+        }
+        &--tg {
+            background-color: #13A6E5;
+        }
+        &--vk {
+            background-color: #0077FF;
+            display: none;
+            @include breakpoint(md) {
+                display: flex;
+            }
+        }
+        &--youtube {
+            background-color: $white;
+            display: none;
+            @include breakpoint(md) {
+                display: flex;
+            }
+            svg {
+                fill: #FE0000;
+            }
+        }
+    }
+    &__phone {
+        padding: 8px 24px;
+        border-radius: 8px;
+        margin: 0 auto;
+        background-color: $yellow;
+        display: flex;
+        align-items: center;
+        width: max-content;
+        transition: .5s;
+        @include breakpoint(xs) {
+            margin: 0 0 0 auto;
+            padding: 8px;
+        }
+        @include breakpoint(sm) {
+            padding: 8px 24px;
+        }
+        @include breakpoint(md) {
+            height: 44px;
+        }
+        @include breakpoint(lg) {
+            &:hover {
+                background-color: $gray-hover;
+            }
+        }
+        &-wrapper {
+            grid-area: phone;
+        }
+        &-icon {
+            width: 24px;
+            height: 24px;
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: $black-main;
+            }
+        }
+        &-text {
+            font-family: 'Onest', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 130%;
+            color: $black-main;
+            @include breakpoint(md) {
+                margin-left: 8px;
+            }
+        }
+    }
+    &__nav {
+        position: fixed;
+        width: 100%;
+        max-height: 0;
+        height: calc(100vh - 182px);
+        top: 182px;
+        left: 0;
+        grid-area: menu;
+        overflow-y: auto;
+        background-color: $beige;
+        transition: 0.7s;
+        @include breakpoint(xs) {
+            height: calc(100vh - 103px);
+            top: 103px;
+        }
+        @include breakpoint(md) {
+            position: relative;
+            top: auto;
+            left: auto;
+            height: max-content;
+            max-height: max-content;
+            background: none;
+        }
+        &--active {
+            max-height: calc(100vh - 188px);
+            @include breakpoint(md) {
+                max-height: max-content;
+            }
+        }
+    }
+}
+
+.navigation {
+    padding: 30px 16px;
+    @include breakpoint(md) {
+        padding: 0;
+    }
+    &__title {
+        font-family: 'Onest', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 130%;
+        color: $black-main;
+        transition: .5s;
+        @include breakpoint(md) {
+            padding: 12px 0;
+            font-weight: 400;
+            color: $black-total;
+        }
+    }
+    > ul {
+        display: grid;
+        row-gap: 12px;
+        @include breakpoint(md) {
+            display: flex;
+            justify-content: center;
+            row-gap: 0;
+        }
+        > li {
+            > a {
+                font-family: 'Onest', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 130%;
+                color: $black-main;
+                @include breakpoint(md) {
+                    color: $beige;
+                }
+            }
+        }
+        > li.has-children {
+            position: relative;
+            cursor: pointer;
+            @include breakpoint(md) {
+                padding-right: 30px;
+            }
+            @include breakpoint(lg) {
+                &:hover {
+                    .navigation-submenu {
+                        &__wrapper {
+                            padding: 12px 10px 12px 0;
+                            grid-template-rows: 1fr;
+                        }
+                    }
+                }
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 20px;
+                top: 0;
+                right: 0;
+                background-image: url(../images/arrow-right.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transition: .5s;
+                @include breakpoint(md) {
+                    background-image: url(../images/arrow-down.svg);
+                }
+            }
+            &--active {
+                &::before {
+                    transform: rotate(90deg);
+                    @include breakpoint(md) {
+                        transform: none;
+                    }
+                }
+                .navigation-submenu {
+                    &__wrapper {
+                        grid-template-rows: 1fr;
+                        @include breakpoint(md) {
+                            padding: 12px 10px 12px 0;
+                        }
+                        @include breakpoint(lg) {
+                            grid-template-rows: 0fr;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        > li + li {
+            @include breakpoint(md) {
+                position: relative;
+                margin-left: 40px;
+                &::after {
+                    content: '/';
+                    position: absolute;
+                    top: 50%;
+                    left: -16px;
+                    transform: translate(-100%, -50%);
+                    font-family: 'Onest', sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 130%;
+                    color: $beige;
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+    &-submenu {
+        margin-top: 12px;
+        padding: 12px 0;
+        border-top: 1px solid rgba(92, 91, 88, 0.20);
+        border-bottom: 1px solid rgba(92, 91, 88, 0.20);
+        @include breakpoint(md) {
+            margin-top: 0;
+            border: none;
+            padding: 0 6px 0 16px;
+            max-height: 300px;
+            overflow: auto;
+        }
+        > li {
+            > a {
+                font-family: 'Onest', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 130%;
+                color: $black-main;
+                transition: .5s;
+                @include breakpoint(md) {
+                    padding: 12px 0;
+                    font-weight: 400;
+                    color: $black-total;
+                }
+                @include breakpoint(lg) {
+                    transition: .5s;
+                    width: 100%;
+                    border-radius: 8px;
+                    &:hover {
+                        background-color: $gray-light;
+                    }
+                }
+            }
+        }
+        > li.has-children {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 20px;
+                top: 0;
+                right: 0;
+                background-image: url(../images/arrow-right.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transition: .5s;
+                @include breakpoint(md) {
+                    top: 12px;
+                    transform: rotate(90deg);
+                }
+            }
+            &--active {
+                &::before {
+                    transform: rotate(90deg);
+                    @include breakpoint(md) {
+                        transform: rotate(-90deg);
+                    }
+                }
+                > a {
+                    color: $brown;
+                    @include breakpoint(md) {
+                        color: $black-total;
+                        font-weight: 500;
+                    }
+                }
+                .navigation-list {
+                    &__wrapper {
+                        grid-template-rows: 1fr;
+                    }
+                }
+            }
+        }
+        > li + li {
+            margin-top: 12px;
+            @include breakpoint(md) {
+                margin-top: 0;
+            }
+        }
+        &__wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            background-color: $beige;
+            border-radius: 4px;
+            padding-right: 10px;
+            overflow: hidden;
+            transition: .7s;
+            @include breakpoint(md) {
+                position: fixed;
+                width: 175px;
+            }
+        }
+        &__block {
+            min-height: 0;
+        }
+    }
+    &-list {
+        padding-top: 12px;
+        @include breakpoint(md) {
+            padding-bottom: 12px;
+            border-top: 1px solid $gray-light;
+            border-bottom: 1px solid $gray-light;
+        }
+        > li {
+            > a {
+                font-family: 'Onest', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 130%;
+                color: $black-main;
+                opacity: 0.6;
+                @include breakpoint(md) {
+                    font-size: 16px;
+                }
+                @include breakpoint(lg) {
+                    transition: .5s;
+                    &:hover {
+                        color: $gray-hover;
+                    }
+                }
+            }
+        }
+        > li + li {
+            margin-top: 12px;
+        }
+        &__wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: .7s;
+        }
+        &__block {
+            min-height: 0;
+        }
+    }
+}

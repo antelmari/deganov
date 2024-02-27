@@ -1,0 +1,494 @@
+.main {
+    &-section {
+        padding-top: 182px;
+        @include breakpoint(xs) {
+            padding-top: 103px;
+        }
+        @include breakpoint(md) {
+            padding-top: 158px;
+        }
+        @include breakpoint(lg) {
+            padding-top: 145px;
+        }
+        @include breakpoint(xl) {
+            padding-top: 132px;
+        }
+        &__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            overflow: hidden;
+            img {
+                object-fit: cover;
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+        &__screen {
+            position: relative;
+            @include breakpoint(lg) {
+                min-height: calc(100vh - 263px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            @include breakpoint(xl) {
+                min-height: calc(100vh - 218px);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, #333 34.11%, rgba(51, 51, 51, 0.00) 81.17%);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: 3;
+                @include breakpoint(md) {
+                    background: linear-gradient(90deg, #333 50%, rgba(51, 51, 51, 0.00) 83.44%);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        &__wrapper {
+            position: relative;
+            padding: 48px 0 34px 0;
+            z-index: 4;
+            @include breakpoint(md) {
+                padding: 71px 0 44px 0;
+            }
+            @include breakpoint(lg) {
+                padding: 39px 0 35px 0;
+                width: 763px;
+            }
+        }
+        &__list {
+            margin-top: 16px;
+            li {
+                display: flex;
+                align-items: center;
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    fill: $beige;
+                }
+                span {
+                    margin-left: 8px;
+                    width: calc(100% - 32px);
+                    font-family: 'Onest', sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 130%;
+                    color: rgba(255, 253, 234, 0.72);
+                }
+            }
+            li + li {
+                margin-top: 12px;
+            }
+        }
+        &__buttons {
+            margin-top: 24px;
+            @include breakpoint(md) {
+                display: flex;
+            }
+        }
+        &__btn {
+            @include breakpoint(md) {
+                width: max-content;
+            }
+            & + & {
+                margin-top: 16px;
+                @include breakpoint(md) {
+                    margin-top: 0;
+                    margin-left: 16px;
+                }
+            }
+        }
+        &__block {
+            padding: 20px 0;
+            border-top: 1px solid rgba(92, 91, 88, 0.20);
+            display: grid;
+            row-gap: 20px;
+            grid-template-columns: 166px 102px;
+            justify-content: space-between;
+            @include breakpoint(sm) {
+                display: flex;
+                row-gap: 0;
+            }
+            @include breakpoint(md) {
+                padding: 28px 0;
+                border-top: none;
+            }
+        }
+        &__advantages {
+            background-color: $black-main;
+            @include breakpoint(md) {
+                border-top: 1px solid rgba(92, 91, 88, 0.20);
+            }
+        }
+        &__advantage {
+            display: flex;
+            align-items: center;
+            img {
+                height: 33px;
+                @include breakpoint(md) {
+                    height: 48px;
+                }
+            }
+            span {
+                margin-left: 16px;
+                font-family: 'Onest', sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 120%;
+                color: $beige;
+                @include breakpoint(md) {
+                    font-size: 20px;
+                }
+                @include breakpoint(lg) {
+                    font-size: 32px;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+}
+
+.help {
+    &__grid {
+        margin-top: 34px;
+        display: grid;
+        row-gap: 20px;
+        @include breakpoint(lg) {
+            margin-top: 48px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 50%;
+                height: 100%;
+                width: 1px;
+                background-color: rgba(92, 91, 88, 0.20);
+            }
+        }
+    }
+    &__row {
+        display: grid;
+        row-gap: 20px;
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+        @include breakpoint(lg) {
+            column-gap: 0;
+        }
+        & + & {
+            @include breakpoint(sm) {
+                border-top: 1px solid rgba(92, 91, 88, 0.20);
+                padding-top: 20px;
+            }
+        }
+    }
+    &__item {
+        &:first-child {
+            @include breakpoint(lg) {
+                padding-right: 20px;
+            }
+        }
+        & + & {
+            @include breakpoint(lg) {
+                padding-left: 20px;
+            }
+        }
+    }
+    &__number {
+        border-radius: 8px;
+        background-color: $gray-light;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Onest', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 106%;
+        color: $black-main;
+    }
+    &__title {
+        margin-top: 16px;
+        font-family: 'Onest', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 120%;
+        color: $black-main;
+    }
+    &__subtitle {
+        margin-top: 8px;
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $gray;
+        @include breakpoint(md) {
+            font-size: 16px;
+        }
+    }
+}
+
+.advantages {
+    &__grid {
+        margin-top: 34px;
+        @include breakpoint(lg) {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+        }
+    }
+    &__img {
+        border-radius: 16px;
+        height: 190px;
+        overflow: hidden;
+        display: flex;
+        @include breakpoint(xs) {
+            height: 240px;
+        }
+        @include breakpoint(sm) {
+            height: 300px;
+        }
+        @include breakpoint(md) {
+            height: 368px;
+        }
+        @include breakpoint(lg) {
+            height: auto;
+        }
+        img {
+            min-width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        margin-top: 34px;
+        display: grid;
+        row-gap: 20px;
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+        @include breakpoint(lg) {
+            margin-top: 0;
+            grid-template-columns: none;
+            column-gap: 0;
+            row-gap: 24px;
+        }
+    }
+    &__item {
+        & + & {
+            @include breakpoint(lg) {
+                padding-top: 24px;
+                border-top: 1px solid rgba(92, 91, 88, 0.20);
+            }
+        }
+    }
+    &__icon {
+        border-radius: 8px;
+        background-color: $gray-light;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $black-main;
+        }
+    }
+    &__title {
+        margin-top: 16px;
+        font-family: 'Onest', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 120%;
+        color: $black-main;
+    }
+    &__subtitle {
+        margin-top: 8px;
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $gray;
+        @include breakpoint(md) {
+            font-size: 16px;
+        }
+    }
+}
+
+.message {
+    padding: 40px 10px;
+    border-radius: 16px;
+    background-color: $black-main;
+    display: grid;
+    row-gap: 24px;
+    @include breakpoint(md) {
+        padding: 40px;
+    }
+    &__logo {
+        width: 221px;
+        height: 42px;
+        display: block;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__text {
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 130%;
+        text-align: center;
+        color: $beige;
+        @include breakpoint(md) {
+            font-size: 20px;
+        }
+        @include breakpoint(lg) {
+            max-width: 906px;
+            margin: 0 auto;
+            font-size: 24px;
+        }
+    }
+    &__signature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 100%;
+            overflow: hidden;
+            display: flex;
+            img {
+                min-width: 100%;
+                object-fit: cover;
+            }
+        }
+        &-text {
+            margin-left: 10px;
+        }
+        &-title {
+            font-family: 'Onest', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 130%;
+            color: $beige;
+        }
+        &-subtitle {
+            font-family: 'Onest', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 130%;
+            color: rgba(255, 253, 234, 0.72);
+        }
+    }
+}
+
+.steps {
+    &__grid {
+        margin-top: 34px;
+        display: grid;
+        row-gap: 20px;
+        @include breakpoint(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+        @include breakpoint(lg) {
+            margin-top: 48px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include breakpoint(xl) {
+            column-gap: 40px;
+        }
+    }
+    &__item {
+        position: relative;
+    }
+    &__number {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: $gray-light;
+        font-family: 'Onest', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 106%;
+        color: $black-main;
+        z-index: 4;
+    }
+    &__img {
+        position: relative;
+        height: 160px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        @include breakpoint(xs) {
+            height: 240px;
+        }
+        @include breakpoint(sm) {
+            height: 160px;
+        }
+        img {
+            min-width: 100%;
+            object-fit: cover;
+            z-index: 2;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            background: lightgray;
+            z-index: 3;
+        }
+    }
+    &__title {
+        margin-top: 12px;
+        font-family: 'Onest', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 120%;
+        color: $black-main;
+    }
+    &__subtitle {
+        margin-top: 8px;
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $gray;
+        @include breakpoint(md) {
+            font-size: 16px;
+        }
+    }
+}

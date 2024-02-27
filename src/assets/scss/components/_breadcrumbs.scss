@@ -1,0 +1,52 @@
+.breadcrumbs {
+    padding: 212px 0 30px 0;
+    @include breakpoint(xs) {
+        padding-top: 133px;
+    }
+    @include breakpoint(md) {
+        padding-top: 198px;
+    }
+    @include breakpoint(lg) {
+        padding-top: 185px;
+    }
+    @include breakpoint(xl) {
+        padding-top: 172px;
+    }
+}
+
+.breadcrumbs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs-item {
+    margin-right: 23px;
+    position: relative;
+    font-family: 'Onest', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+    color: $gray;
+    a {
+        color: $gray-light;
+    }
+    &::before {
+        content: '/';
+        position: absolute;
+        top: 50%;
+        right: -8px;
+        transform: translate(100%, -50%);
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $gray;
+        opacity: 0.2;
+    }
+    &:last-child {
+        margin-right: 0;
+        &::before {
+            display: none;
+        }
+    }
+}

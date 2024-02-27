@@ -1,0 +1,46 @@
+---
+title: DeganovRest | Отзывы
+bodyClass: reviews-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Отзывы')
+
+    .container
+        h1.title-section Отзывы
+    
+    section.section
+        .container
+            .reviews__grid
+                .reviews__item
+                    .reviews__content
+                        .reviews__text «Хотим выразить Сергею благодарность за восстановление столика и двух стульев, которые делал ещё мой дед. Этой мебели уже около 60 лет и с помощью замечательного мастера у нее началась новая жизнь для следующих поколений моей семьи. Мы очень довольны результатом.»
+                        .reviews__row
+                            .reviews__name
+                                .reviews__name-img
+                                    img(src="assets/images/user-1.svg", alt="user")
+                                .reviews__name-text Анатолий
+                            .reviews__date 21.10.2023
+                    .swiper-container.reviews__slider
+                        .swiper-wrapper
+                            .swiper-slide.reviews__slide
+                                img(src="assets/images/review-1.jpg", alt="review")
+                            .swiper-slide.reviews__slide
+                                img(src="assets/images/review-1.jpg", alt="review")
+                            .swiper-slide.reviews__slide
+                                img(src="assets/images/review-1.jpg", alt="review")
+                        .swiper-button-prev.reviews-button-prev
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-left")
+                        .swiper-button-next.reviews-button-next
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#arrow-right")
+                        .swiper-pagination.reviews-pagination
+            a.btn--center.btn--black(href="")
+                svg
+                    use(xlink:href="assets/icons/sprites.svg#chat")
+                span Смотреть ещё

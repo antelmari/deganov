@@ -1,0 +1,158 @@
+.reviews {
+    &__grid {
+        margin-top: 34px;
+        display: grid;
+        row-gap: 30px;
+        @include breakpoint(md) {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+        }
+        @include breakpoint(lg) {
+            margin-top: 48px;
+            gap: 40px;
+        }
+    }
+    &__item {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    &__content {
+        padding: 16px;
+        background-color: $gray-light;
+        @include breakpoint(lg) {
+            padding: 24px;
+        }
+    }
+    &__text {
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $black-main;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include breakpoint(lg) {
+            font-size: 16px;
+        }
+    }
+    &__row {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        &-img {
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            overflow: hidden;
+            display: flex;
+            @include breakpoint(lg) {
+                width: 44px;
+                height: 44px;
+            }
+            img {
+                min-width: 100%;
+                object-fit: cover;
+            }
+        }
+        &-text {
+            margin-left: 8px;
+            font-family: 'Onest', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 130%;
+            color: $black-main;
+            @include breakpoint(lg) {
+                font-size: 16px;
+            }
+        }
+    }
+    &__date {
+        font-family: 'Onest', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: $gray;
+        @include breakpoint(lg) {
+            font-size: 14px;
+        }
+    }
+    &__slider {
+        position: relative;
+    }
+    &__slide {
+        height: 173px;
+        display: flex;
+        @include breakpoint(sm) {
+            height: 250px;
+        }
+        @include breakpoint(md) {
+            height: 173px;
+        }
+        @include breakpoint(lg) {
+            height: 218px;
+        }
+        img {
+            min-width: 100%;
+            object-fit: cover;
+        }
+    }
+    &-button {
+        &-prev, &-next {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-color: $beige;
+            @include breakpoint(lg) {
+                width: 44px;
+                height: 44px;
+            }
+            &::after {
+                display: none;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: $black-main;
+            }
+        }
+        &-prev {
+            left: 16px;
+        }
+        &-next {
+            right: 16px;
+        }
+    }
+    &-pagination {
+        .swiper-pagination-bullet {
+            background: $white;
+            opacity: 1;
+            &-active {
+                background: $yellow;
+            }
+        }
+    }
+    &__btn {
+        width: 100%;
+        margin-top: 30px;
+        @include breakpoint(md) {
+            margin-top: 34px;
+            width: 221px;
+        }
+        @include breakpoint(lg) {
+            margin-top: 48px;
+            width: 301px;
+        }
+        @include breakpoint(xl) {
+            width: 260px;
+        }
+    }
+}

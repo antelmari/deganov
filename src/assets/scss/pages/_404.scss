@@ -1,0 +1,74 @@
+.not-found-page {
+    padding-top: 188px;
+    @include breakpoint(md) {
+        padding-top: 172px;
+    }
+    @include breakpoint(lg) {
+        padding-top: 158px;
+    }
+    @include breakpoint(xl) {
+        padding-top: 113px;
+    }
+    h1.title-section {
+        display: none;
+    }
+}
+
+.page404 {
+    padding: 73px 0;
+    @include breakpoint(md) {
+        padding: 160px 0;
+    }
+    @include breakpoint(lg) {
+        padding: 0;
+        height: calc(100vh - 158px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    @include breakpoint(xl) {
+        height: calc(100vh - 113px);
+    }
+    &__wrapper {
+        display: grid;
+        row-gap: 34px;
+        @include breakpoint(md) {
+            row-gap: 60px;
+        }
+    }
+    &__title {
+        font-family: 'Onest', sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 100%;
+        color: $black-main;
+        text-align: center;
+        @include breakpoint(md) {
+            font-size: 120px;
+        }
+    }
+    &__subtitle {
+        font-family: 'Onest', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 120%;
+        color: $black-main;
+        text-transform: uppercase;
+        text-align: center;
+        @include breakpoint(md) {
+            font-size: 48px;
+            line-height: 100%;
+        }
+    }
+    &__btn {
+        font-family: 'Onest', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 130%;
+        color: $black-main;
+        @include breakpoint(sm) {
+            width: 250px;
+            margin: 0 auto;
+        }
+    }
+}

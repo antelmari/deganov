@@ -1,0 +1,60 @@
+block footer
+    footer.footer
+        .container
+            .footer__wrapper
+                .footer__row
+                    a.footer__logo(href="/")
+                        img(src="assets/images/logo.svg", alt="logo")
+                    a.footer__up(href="#page")
+                        svg
+                            use(xlink:href="assets/icons/sprites.svg#up")
+                .footer__links
+                    .footer__links-item © 2013–2023 ИП «Деганов Рест»
+                    a.footer__links-item(href="/policy.html") Политика конфиденциальности
+                    .footer__links-item
+                        a(href="https://di-project.studio/") Разработка сайта:&nbsp;
+                        span Di-Project
+        
+        .popup#popup-call
+            .popup__title Заказать обратный звонок
+            .popup__subtitle Заполните форму, и мы свяжемся с вами.
+            .popup__form
+                form
+                    .popup__inputs
+                        .popup__input
+                            input(type="text", placeholder="Имя")
+                        .popup__input
+                            input(type="tel", placeholder="Телефон")
+                    .popup__textarea
+                        textarea(placeholder="Оставить комментарий")
+                    .popup__accept Оставляя свои данные, вы соглашаетесь на обработку персональных данных. #[a(href="/policy.html", target="_blank") Условия конфиденциальности]
+                    .popup__submit
+                        input(type="submit", value="")
+                        .popup__submit-content.btn--yellow
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#phone")
+                            span Заказать обратный звонок
+
+        .popup#popup-photos
+            .popup__title Выслать фото для оценки
+            .popup__subtitle Заполните форму, и мы свяжемся с вами.
+            .popup__form
+                form
+                    .popup__inputs
+                        .popup__input
+                            input(type="text", placeholder="Имя")
+                        .popup__input
+                            input(type="tel", placeholder="Телефон")
+                    .popup__file
+                        input(type="file" name="file")
+                        .popup__file-content
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#img")
+                            span Прикрепить фото
+                    .popup__accept Оставляя свои данные, вы соглашаетесь на обработку персональных данных. #[a(href="/policy.html", target="_blank") Условия конфиденциальности]
+                    .popup__submit
+                        input(type="submit", value="")
+                        .popup__submit-content.btn--yellow
+                            svg
+                                use(xlink:href="assets/icons/sprites.svg#photo")
+                            span Отправить на оценку

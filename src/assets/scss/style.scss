@@ -1,0 +1,35 @@
+$black-main: #333;
+$black-total: #000;
+$beige:#FFFDEA;
+$brown: #5E4F23;
+$gray: #605F5A;
+$gray-hover: #ADACA1;
+$gray-light: #E3E3D8;
+$white: #FFF;
+$yellow: #FFDE32;
+
+@import 'plugins/swiper-bundle';
+@import 'plugins/twentytwenty-no-compass';
+
+@import 'base/mixins';
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/ui';
+
+@import 'includes/header';
+@import 'includes/footer';
+
+@import 'components/before_after';
+@import 'components/breadcrumbs';
+@import 'components/btns';
+@import 'components/cards';
+@import 'components/form';
+
+@import 'pages/index';
+@import 'pages/services';
+@import 'pages/prices';
+@import 'pages/reviews';
+@import 'pages/contacts';
+@import 'pages/portfolio';
+@import 'pages/404';
